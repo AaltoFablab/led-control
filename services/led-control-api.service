@@ -1,0 +1,15 @@
+# https://www.devdungeon.com/content/creating-systemd-service-files
+
+[Unit]
+Description=Raspberry Pi LED control API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /home/pi/led-control/api/api.py
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target

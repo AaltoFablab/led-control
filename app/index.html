@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>RiotJS Demo with GPIOZero on Rasoberry Pi</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+
+  <app title="Hola!"></app>
+
+  <script type="riot/tag" src="tags/app.tag"></script>
+  <script type="riot/tag" src="tags/led.tag"></script>
+
+  <script src="js/riot+compiler.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    riot.mount('*')
+  </script>
+
+</body>
+</html>
